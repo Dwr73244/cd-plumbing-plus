@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>C&amp;D Plumbing Plus — Mobile Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:ital,wght@1,500&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background:
+      radial-gradient(1200px 600px at 20% 0%, #1a3a5c 0%, transparent 60%),
+      radial-gradient(900px 500px at 90% 100%, #0E9488 0%, transparent 60%),
+      #0B1F36;
+    color: #E8F0F8;
+    min-height: 100vh;
+    padding: 40px 24px 80px;
+  }
+  .page-head {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 48px;
+  }
+  .page-head .eyebrow {
+    color: #14B8A6;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+  .page-head h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 12px;
+    color: #fff;
+  }
+  .page-head p {
+    color: #9FBBD0;
+    font-size: 16px;
+    margin: 0;
+  }
+  .page-head a {
+    color: #14B8A6;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .page-head a:hover { text-decoration: underline; }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 22px;
+  }
+  .legend span {
+    background: rgba(20,184,166,.14);
+    color: #14B8A6;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .frames {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 56px 32px;
+    max-width: 1800px;
+    margin: 0 auto;
+    justify-items: center;
+  }
+
+  .phone-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .phone-label {
+    text-align: center;
+  }
+  .phone-label strong {
+    display: block;
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .phone-label em {
+    font-style: normal;
+    font-size: 13px;
+    color: #9FBBD0;
+  }
+
+  /* iPhone-ish bezel */
+  .phone {
+    width: 390px;
+    height: 760px;
+    background: #0B0B0F;
+    border-radius: 48px;
+    padding: 14px;
+    box-shadow:
+      0 30px 80px rgba(0,0,0,.55),
+      0 0 0 1px rgba(255,255,255,.05) inset,
+      0 4px 0 rgba(255,255,255,.06) inset;
+    position: relative;
+  }
+  .phone:before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 28px;
+    background: #000;
+    border-radius: 20px;
+    z-index: 2;
+  }
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 36px;
+    overflow: hidden;
+    position: relative;
+  }
+  .phone-screen iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    /* Render the page at mobile width even though it's in a 390px frame.
+       The site's responsive CSS handles everything once viewport meta is honored. */
+  }
+
+  /* Scroll-position helpers shown beneath each phone */
+  .phone-cap {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    color: #9FBBD0;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .phone-cap strong { color: #14B8A6; }
+
+  .footer-note {
+    margin: 80px auto 0;
+    max-width: 720px;
+    text-align: center;
+    color: #748DA1;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .footer-note code {
+    background: rgba(255,255,255,.06);
+    padding: 2px 8px;
+    border-radius: 6px;
+    color: #E8F0F8;
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 20px 8px 60px; }
+    .phone { transform: scale(0.85); transform-origin: top center; margin-bottom: -100px; }
+    .frames { gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-head">
+  <span class="eyebrow">Mobile Mockup · iPhone 14/15 width (390px)</span>
+  <h1>C&amp;D Plumbing Plus — phone view</h1>
+  <p>Same live site as <a href="index.html">index.html</a>, scrolled to four key positions so you can see the full mobile flow side-by-side. Sticky call bar (bottom) and sticky header (top) appear on every screen.</p>
+  <div class="legend">
+    <span>✓ Tap-to-call everywhere</span>
+    <span>✓ Sticky "Call Chris" bar</span>
+    <span>✓ Hamburger nav</span>
+    <span>✓ Single-column stacking</span>
+    <span>✓ Touch-target buttons</span>
+  </div>
+</div>
+
+<div class="frames">
+
+  <div class="phone-wrap">
+    <div class="phone-label">
+      <strong>1 · Hero + available-today card</strong>
+      <em>First impression — phone number above the fold</em>
+    </div>
+    <div class="phone">
+      <div class="phone-screen">
+        <iframe src="index.html#top" title="Hero view" loading="lazy"></iframe>
+      </div>
+    </div>
+    <span class="phone-cap"><strong>Scroll:</strong> top of page</span>
+  </div>
+
+  <div class="phone-wrap">
+    <div class="phone-label">
+      <strong>2 · Services grid</strong>
+      <em>8 services, stacked single-column on mobile</em>
+    </div>
+    <div class="phone">
+      <div class="phone-screen">
+        <iframe src="index.html#services" title="Services view" loading="lazy"></iframe>
+      </div>
+    </div>
+    <span class="phone-cap"><strong>Scroll:</strong> #services</span>
+  </div>
+
+  <div class="phone-wrap">
+    <div class="phone-label">
+      <strong>3 · Reviews + Facebook embed</strong>
+      <em>Google + FB CTAs, live FB page plugin</em>
+    </div>
+    <div class="phone">
+      <div class="phone-screen">
+        <iframe src="index.html#reviews" title="Reviews view" loading="lazy"></iframe>
+      </div>
+    </div>
+    <span class="phone-cap"><strong>Scroll:</strong> #reviews</span>
+  </div>
+
+  <div class="phone-wrap">
+    <div class="phone-label">
+      <strong>4 · Contact form</strong>
+      <em>Form + phone + hours + Facebook</em>
+    </div>
+    <div class="phone">
+      <div class="phone-screen">
+        <iframe src="index.html#contact" title="Contact view" loading="lazy"></iframe>
+      </div>
+    </div>
+    <span class="phone-cap"><strong>Scroll:</strong> #contact</span>
+  </div>
+
+  <div class="phone-wrap">
+    <div class="phone-label">
+      <strong>5 · About Chris</strong>
+      <em>"Plumbing Professor" story + credibility points</em>
+    </div>
+    <div class="phone">
+      <div class="phone-screen">
+        <iframe src="index.html#about" title="About view" loading="lazy"></iframe>
+      </div>
+    </div>
+    <span class="phone-cap"><strong>Scroll:</strong> #about</span>
+  </div>
+
+  <div class="phone-wrap">
+    <div class="phone-label">
+      <strong>6 · FAQ + service area</strong>
+      <em>Pricing, licensing, emergencies answered</em>
+    </div>
+    <div class="phone">
+      <div class="phone-screen">
+        <iframe src="index.html#service-area" title="Service area view" loading="lazy"></iframe>
+      </div>
+    </div>
+    <span class="phone-cap"><strong>Scroll:</strong> #service-area</span>
+  </div>
+
+</div>
+
+<div class="footer-note">
+  <p>Each phone is a live <code>&lt;iframe&gt;</code> into the same <code>index.html</code> — scroll inside any frame to explore that section in real-time. Open <a href="index.html" style="color:#14B8A6;">index.html</a> directly and shrink your browser window to ~390px for full interactive mobile testing (hamburger menu, sticky call bar, etc.).</p>
+</div>
+
+</body>
+</html>
