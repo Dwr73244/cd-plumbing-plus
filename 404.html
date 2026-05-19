@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page Not Found | C&amp;D Plumbing Plus — Rochester NY</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .nf {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+    text-align: center;
+  }
+  .nf h1 { font-size: clamp(40px, 6vw, 72px); margin: 8px 0 14px; color: var(--navy); }
+  .nf p { color: var(--ink-soft); font-size: 17px; margin: 0 0 28px; max-width: 520px; }
+  .nf__icon { font-size: 64px; margin-bottom: 12px; }
+  .nf__ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="/" class="logo" aria-label="C&amp;D Plumbing Plus home">
+      <img class="logo__mark" src="assets/logo.png" alt="" width="44" height="44" />
+      <span class="logo__text">
+        <strong>C&amp;D Plumbing Plus</strong>
+        <em>Rochester, NY · Family-Owned</em>
+      </span>
+    </a>
+  </div>
+</header>
+
+<main class="nf">
+  <div class="nf__icon" aria-hidden="true">🔧</div>
+  <span class="eyebrow">404 — page not found</span>
+  <h1>That page sprung a leak.</h1>
+  <p>Looks like the page you were after isn't here. Head home, or call Chris directly — he can usually solve it faster than we can rebuild the URL.</p>
+  <div class="nf__ctas">
+    <a class="btn btn--primary btn--lg" href="/">← Back to home</a>
+    <a class="btn btn--accent btn--lg" href="tel:+15855202522">Call (585) 520-2522</a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__legal">© <span id="year">2026</span> C&amp;D Plumbing Plus, Inc. · Licensed &amp; insured in NY</div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
