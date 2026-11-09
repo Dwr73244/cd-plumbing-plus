@@ -1,6 +1,6 @@
 # Quinn project profile template
 
-Quinn 2.1, 2026-11-09. Copy this into the project's `docs/qa/quinn/profile.md` and fill it in
+Quinn 2.2, 2026-11-09. Copy this into the project's `docs/qa/quinn/profile.md` and fill it in
 from the real repository. Keep it short: facts an agent needs, not a log of past runs. Past
 results go in the hub. Never copy filled-in values from another project, and never put secret
 values here (name where they come from instead).
