@@ -1,0 +1,7 @@
+# GitHub Pages (Jekyll) publishes this repo as the mockup site. Keep the DLM agent and QA files
+# off the public site; everything that was published before stays published.
+exclude:
+  - docs/qa
+  - AGENTS.md
+  - CLAUDE.md
+  - .github
