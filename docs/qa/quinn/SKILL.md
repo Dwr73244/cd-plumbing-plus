@@ -5,7 +5,7 @@ description: Quinn is the DLM QA kit for every project. Use it when writing or f
 
 # Quinn: the DLM QA kit
 
-Quinn 2.1, 2026-11-09. Master copy: `docs/qa/quinn/` in DLM-Innovations/dlm-agent-hub.
+Quinn 2.2, 2026-11-09. Master copy: `docs/qa/quinn/` in DLM-Innovations/dlm-agent-hub.
 
 Quinn is one QA kit for every project. The rules are the same everywhere. Each project keeps
 only its own specifics (its commands, its customer journeys, its release steps) in its

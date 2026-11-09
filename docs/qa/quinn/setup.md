@@ -1,6 +1,6 @@
 # Quinn: setting up a new project
 
-Quinn 2.1, 2026-11-09. Every DLM Innovations project gets Quinn before its first feature: a new
+Quinn 2.2, 2026-11-09. Every DLM Innovations project gets Quinn before its first feature: a new
 product, a client site, a consulting job, an internal tool. The hub creates a "Set up Quinn" task
 for every new DLM project automatically; this file is how to do it.
 
@@ -66,14 +66,15 @@ how to run the tests, what tests must never touch, and the real customer numbers
 
 ## 5. Register the copy
 
-In a small PR to DLM-Innovations/dlm-agent-hub, add the repo to the list under "Where the copies
-live" in the master `README.md`. Then run `npm run quinn:check` there: it compares every listed
-repo's copy with the master and fails on anything missing or different.
+In a small PR to DLM-Innovations/dlm-agent-hub, add the repo to `docs/qa/quinn-copies.md`. Then
+run `npm run quinn:check` there: it compares every listed repo's copy with the master and fails on
+anything missing or different.
 
 ## 6. Done means
 
 - [ ] `docs/qa/quinn/` has the unchanged shared files and a real `profile.md`.
 - [ ] `AGENTS.md`, `CLAUDE.md` and the PR template point at Quinn.
-- [ ] The hub project's `repo` field is set, and the repo is listed in the master README.
+- [ ] The hub project's `repo` field is set, and the repo is listed in the hub's
+      `docs/qa/quinn-copies.md`.
 - [ ] `npm run quinn:check` passes in the hub repo.
 - [ ] The "Set up Quinn" task is handed off with the PR links.

@@ -1,6 +1,6 @@
 # Quinn: when CI fails, and shipping a release
 
-Quinn 2.1, 2026-11-09. Shared by every DLM project; the project's `profile.md` lists which
+Quinn 2.2, 2026-11-09. Shared by every DLM project; the project's `profile.md` lists which
 journeys block its release and what "release" means there (an installer, a deploy, a published
 page).
 
