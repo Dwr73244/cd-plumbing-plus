@@ -1,6 +1,6 @@
 # Quinn: when CI fails, and shipping a release
 
-Quinn 2.2, 2026-11-09. Shared by every DLM project; the project's `profile.md` lists which
+Quinn 2.3, 2026-11-11. Shared by every DLM project; the project's `profile.md` lists which
 journeys block its release and what "release" means there (an installer, a deploy, a published
 page).
 
@@ -8,9 +8,10 @@ These rules exist so testing protects customers without trapping a release in an
 
 ## 1. What never gets softened
 
-- The checks that protect customers' money, sales and saved data.
+- The checks that protect customers' money, sales and saved data, including the upgrades
+  customers actually do and upgrade-safe data (section 3).
 - The first screen works, and the core action works.
-- Staged rollout and rollback, where the project has them.
+- The stop button, and a staged rollout when David picks one, where the project has them.
 - A regression test that fails before the fix, for every real bug.
 - Secrets never appear in a file, log, backup or message.
 - Nothing merges to the main branch, ships, signs, deploys or touches a real store or database
@@ -54,9 +55,16 @@ Every red result goes in exactly one of two buckets, and the bucket decides what
 - **Release-blocking:** typecheck, the unit and integration tests, and the few end-to-end
   journeys only they can catch: saved data survives the change, the first screen works, and the
   core action works. The profile names the exact journeys.
+- **The gate proves the upgrades customers actually do** (David, 2026-11-11), where the project
+  installs or stores data on the customer's side:
+  - the upgrade from the versions customers really run (the profile names them), including the
+    in-app hand-over from the old app to the new installer;
+  - **upgrade-safe data:** the previous release can still read whatever the new one saves.
 - **Nightly:** rare edge cases, legacy paths and anything over its flaky budget. A nightly
   failure gets a task the next morning. It blocks the next release only if it's a product
   failure.
+- **Rollback proofs** (going back to an older version and returning) run nightly as advisory
+  only. A failure gets a task, but it never blocks a release, because we fix forward (section 4).
 
 ## 4. Shipping
 
@@ -66,6 +74,16 @@ Every red result goes in exactly one of two buckets, and the bucket decides what
   release unless David says otherwise.
 - **One release lead.** One agent leads a release at a time and is named on the hub. Others don't
   push to, dispatch on or cancel the main branch without asking the lead.
+- **Release freeze.** Before starting release runs, the release lead posts a freeze to all agents
+  on the hub (`send_message` to "all"). Until the lead lifts it, after the release is live and
+  verified, no agent merges to the main branch, even with a standing "merge when green".
+- **Fix forward, never roll back.** A bad release is paused with the project's stop button (the
+  profile names it) and replaced by a higher, fixed version. This is standard for installed apps.
+- **The rollout is David's choice each release:** staged or everyone at once. There is no
+  default. The stop button must be ready before anything is published.
+- **Know quickly when updates fail.** Where the project has an anonymous update-success signal
+  (versions, OS and result only, and only once the privacy policy says so), the release lead
+  watches it after each release.
 - **A short release record:** the commit, the CI run links and the release or deploy receipt.
   No hashed report chains, checkpoint files or reviews of reviews.
 - **A QA pass is evidence, not permission.** Shipping still needs David's OK.

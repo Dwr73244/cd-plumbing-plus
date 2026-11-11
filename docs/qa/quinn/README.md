@@ -1,6 +1,6 @@
 # Quinn: the DLM QA kit
 
-Quinn 2.2, 2026-11-09.
+Quinn 2.3, 2026-11-11.
 
 Quinn is one QA kit for every DLM Innovations project. Start at [SKILL.md](SKILL.md).
 
@@ -10,7 +10,7 @@ Quinn is one QA kit for every DLM Innovations project. Start at [SKILL.md](SKILL
 |---|---|
 | [SKILL.md](SKILL.md) | What Quinn is, which part to read, which rule wins |
 | [build-and-test.md](build-and-test.md) | Acceptance criteria, unit tests, test data, the code checklist, review, "done" |
-| [ci-and-releases.md](ci-and-releases.md) | Red CI results, the flaky budget, release-blocking vs. nightly, shipping |
+| [ci-and-releases.md](ci-and-releases.md) | Red CI results, the flaky budget, release-blocking vs. nightly, shipping (fix forward, the release freeze) |
 | [qa-pass.md](qa-pass.md) | The QA pass on a feature or a release candidate, and its report |
 | [setup.md](setup.md) | Setting up Quinn in a new project, step by step |
 | [profile-template.md](profile-template.md) | The template for a project's `profile.md` |
@@ -41,6 +41,14 @@ projects only.
 
 ## Changes
 
+- **2.3, 2026-11-11.** The new release process (David, 2026-11-11), in
+  [ci-and-releases.md](ci-and-releases.md): fix forward (pause with the stop button, ship a higher
+  fixed version, never roll back); the release gate proves the upgrades customers actually do,
+  including the in-app hand-over, plus upgrade-safe data, while rollback proofs run nightly as
+  advisory only; a release freeze posted to all agents on the hub; the rollout is David's choice
+  each release, with the stop button ready first; and an update-success signal watched where a
+  project has one. The CI failure rules are unchanged. The profile template asks for the stop
+  button, the versions customers run and the update-success signal.
 - **2.2, 2026-11-09.** The list of repositories that keep a copy moves out of this README into the
   hub's `docs/qa/quinn-copies.md`, so registering a new repository no longer changes a shared file.
 - **2.1, 2026-11-09.** Adds [setup.md](setup.md), the steps for giving a new project Quinn. The

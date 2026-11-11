@@ -1,6 +1,6 @@
 # Quinn: the QA pass
 
-Quinn 2.2, 2026-11-09. Shared by every DLM project; the project's `profile.md` supplies the
+Quinn 2.3, 2026-11-11. Shared by every DLM project; the project's `profile.md` supplies the
 commands, test accounts, critical journeys and release journeys.
 
 Someone says "QA the new X" and walks away. They come back to a short report where **every

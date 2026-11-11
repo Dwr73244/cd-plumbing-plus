@@ -1,6 +1,6 @@
 # Quinn project profile template
 
-Quinn 2.2, 2026-11-09. Copy this into the project's `docs/qa/quinn/profile.md` and fill it in
+Quinn 2.3, 2026-11-11. Copy this into the project's `docs/qa/quinn/profile.md` and fill it in
 from the real repository. Keep it short: facts an agent needs, not a log of past runs. Past
 results go in the hub. Never copy filled-in values from another project, and never put secret
 values here (name where they come from instead).
@@ -11,6 +11,9 @@ values here (name where they come from instead).
 - Repository and base branch (check, don't assume `main`); branch naming:
 - What "release" means here (an installer, a deploy, a published page) and who approves it:
 - The core action (the one thing that must always work):
+- The stop button (how a bad release is paused while the fixed version is made), if any:
+- The versions customers really run (the upgrades the release gate proves), if it installs:
+- The anonymous update-success signal, if any, and where it is watched:
 
 ## Commands
 
