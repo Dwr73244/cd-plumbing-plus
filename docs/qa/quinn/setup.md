@@ -61,6 +61,7 @@ how to run the tests, what tests must never touch, and the real customer numbers
   - [ ] A different agent did a product-code bug review against the checklist (link or summary):
   - [ ] CI: any re-run was for a *machine* failure only, noted here with the reason:
   - [ ] Releases: nothing here softens a check that protects money, sales or saved data.
+  - [ ] Releases: no merge to main during a release freeze posted on the hub (fix forward, never roll back).
   - [ ] QA: a feature or release candidate had a Quinn QA pass (docs/qa/quinn/qa-pass.md); link or summary:
   ```
 

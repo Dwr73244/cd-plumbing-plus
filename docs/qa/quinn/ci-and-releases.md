@@ -76,11 +76,13 @@ Every red result goes in exactly one of two buckets, and the bucket decides what
   push to, dispatch on or cancel the main branch without asking the lead.
 - **Release freeze.** Before starting release runs, the release lead posts a freeze to all agents
   on the hub (`send_message` to "all"). Until the lead lifts it, after the release is live and
-  verified, no agent merges to the main branch, even with a standing "merge when green".
+  verified, no agent merges to the main branch, even with a standing "merge when green". The
+  scope freeze only keeps new features out of the candidate; the release freeze stops every
+  merge to the main branch.
 - **Fix forward, never roll back.** A bad release is paused with the project's stop button (the
   profile names it) and replaced by a higher, fixed version. This is standard for installed apps.
 - **The rollout is David's choice each release:** staged or everyone at once. There is no
-  default. The stop button must be ready before anything is published.
+  default. Where the project has a stop button, it must be ready before anything is published.
 - **Know quickly when updates fail.** Where the project has an anonymous update-success signal
   (versions, OS and result only, and only once the privacy policy says so), the release lead
   watches it after each release.
