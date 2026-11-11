@@ -1,6 +1,6 @@
 # Quinn: setting up a new project
 
-Quinn 2.2, 2026-11-09. Every DLM Innovations project gets Quinn before its first feature: a new
+Quinn 2.3, 2026-11-11. Every DLM Innovations project gets Quinn before its first feature: a new
 product, a client site, a consulting job, an internal tool. The hub creates a "Set up Quinn" task
 for every new DLM project automatically; this file is how to do it.
 
@@ -61,6 +61,7 @@ how to run the tests, what tests must never touch, and the real customer numbers
   - [ ] A different agent did a product-code bug review against the checklist (link or summary):
   - [ ] CI: any re-run was for a *machine* failure only, noted here with the reason:
   - [ ] Releases: nothing here softens a check that protects money, sales or saved data.
+  - [ ] Releases: no merge to main during a release freeze posted on the hub (fix forward, never roll back).
   - [ ] QA: a feature or release candidate had a Quinn QA pass (docs/qa/quinn/qa-pass.md); link or summary:
   ```
 

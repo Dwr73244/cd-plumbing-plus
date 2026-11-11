@@ -1,6 +1,6 @@
 # Quinn: building and testing a change
 
-Quinn 2.2, 2026-11-09. Shared by every DLM project; the project's `profile.md` adds its
+Quinn 2.3, 2026-11-11. Shared by every DLM project; the project's `profile.md` adds its
 specifics.
 
 Be thorough and proportionate. Test as much as the logic needs, and no more machinery than the

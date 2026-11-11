@@ -5,7 +5,7 @@ description: Quinn is the DLM QA kit for every project. Use it when writing or f
 
 # Quinn: the DLM QA kit
 
-Quinn 2.2, 2026-11-09. Master copy: `docs/qa/quinn/` in DLM-Innovations/dlm-agent-hub.
+Quinn 2.3, 2026-11-11. Master copy: `docs/qa/quinn/` in DLM-Innovations/dlm-agent-hub.
 
 Quinn is one QA kit for every project. The rules are the same everywhere. Each project keeps
 only its own specifics (its commands, its customer journeys, its release steps) in its
@@ -48,6 +48,9 @@ database without David's OK.
   code against it before a feature merges.
 - **Strict about the product, tolerant about the machines.** A wrong value is never re-run
   away. A machine failure gets one re-run.
+- **Fix forward, never roll back.** A bad release is paused with the stop button and replaced
+  by a higher, fixed version. The release gate proves the upgrades customers actually do, and
+  the release lead posts a freeze on the hub before release runs.
 - **A QA finding is real before it is reported:** reproduced twice, confirmed a second,
   independent way, and checked against the code that governs it.
 - **Short, plain reports.** What was found, what needs David's decision, what is clean, and
